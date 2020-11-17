@@ -2,8 +2,6 @@
 from InputTools import UserInput 
 
 parser = UserInput.commonParser()
-parser.add_argument("--powheg", action='store_true', help="Is a POWHEG sample")
-parser.add_argument("-o", "--outfolder", type=str, default=".", help="Folder to store output (default cwd)")
 args = parser.parse_args()
 
 edmFile = args.edmfile if args.edmfile else UserInput.firstFileFromDAS(args.das)
