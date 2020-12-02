@@ -13,7 +13,7 @@ def getMembers(tar, name, isfile):
     for member in tar.getmembers():
         if member.name.startswith(name) and not isfile or member.name == name:
             members.append(member)
-    return memberstT
+    return members
 
 # This works for madgraph if you have lzma support in tarfile, not in CMSSW_10_6
 def extractTarPython(gridpack, toRead, outfolder, isfile=True):
