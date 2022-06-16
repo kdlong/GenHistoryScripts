@@ -5,7 +5,7 @@ parser = UserInput.commonParser()
 args = parser.parse_args()
 
 edmFile = args.edmfile if args.edmfile else UserInput.firstFileFromDAS(args.das)
-if "NANOAOD" in args.edmFile:
+if "NANOAOD" in edmFile:
     logging.error("LHE header is not stored in NanoAOD files. Exiting")
     exit(1)
 
